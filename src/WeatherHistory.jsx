@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { apiCall } from "./service/apiService";
-const url = `http://localhost:3000/weather_history`;
+
+const url = `https://next-json-server.onrender.com/weather_history`;
 
 export default function WeatherHistory() {
   const [data, setData] = useState(null);
