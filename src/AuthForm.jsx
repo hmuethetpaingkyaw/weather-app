@@ -12,8 +12,8 @@ export default function AuthForm() {
   const handleSave = async () => {
     if (emailRef.current.value && passwordRef.current.value) {
       const url = isLogin
-        ? "http://localhost:3000/login"
-        : "http://localhost:3000/register";
+        ? "https://next-json-server.onrender.com/login"
+        : "https://next-json-server.onrender.com/register";
 
       const resp = await apiCall(url, "post", {
         email: emailRef.current.value,
