@@ -5,11 +5,14 @@ import { useEffect } from "react";
 export default function DefaultLayout() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = getToken();
+  const check = async () => {
+    const token = await getToken();
     if (!token) {
       navigate("/auth");
     }
+  }
+  useEffect(() => {
+    check()
   }, []);
 
   return (
